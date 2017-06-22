@@ -27,7 +27,7 @@ A Spinnaker **Instance** maps to a Kubernetes
 differentiates this from other Cloud Providers is the ability for Pods to run
 multiple containers at once, whereas typical IAAS providers in Spinanker run
 exactly one image per Instance. This means that extra care must be taken when
-updating Pods with more than container to ensure that the correct container is
+updating Pods with more than one container to ensure that the correct container is
 replaced.
 
 ### Server Group
@@ -50,7 +50,7 @@ template:
 Furthermore, using the [Docker Registry](/setup/providers/docker-registry/)
 accounts associated with the Kubernetes Account being deployed to, a list of
 [Image Pull
-Secretes](https://kubernetes.io/docs/concepts/containers/images/#specifying-imagepullsecrets-on-a-pod)
+Secrets](https://kubernetes.io/docs/concepts/containers/images/#specifying-imagepullsecrets-on-a-pod)
 already populated by Spinnaker are attached to the created Pod definition. This
 ensures that images from private registries can always be deployed. Image Pull
 Secrets named based on their Docker Registry account name in Spinnaker, so
